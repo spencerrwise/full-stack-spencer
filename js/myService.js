@@ -26,6 +26,18 @@ return{
 				method:"GET",
 				url:"http://localhost:3000/me"
 			})
+		},
+		addFriend: function(friendObject){
+			return $http({
+				method:"POST",
+				url: "http://localhost:3000/friends",
+				data: {
+					name: friendObject.name,
+					age: friendObject.age,
+					yearMet: friendObject.yearMet
+				}
+
+			})
 		}
 	};
 });

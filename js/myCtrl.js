@@ -25,4 +25,17 @@ $scope.getPersonalInformation = function(){
 	})
 }
 
+//input fields for addFriend
+
+$scope.addFriend = function(){
+	mainService.addFriend($scope.friendForm);
+
+	mainService.getFriends().then(function(response) {
+		$scope.friendForm = response.data;
+
+	});
+	$scope.friendForm.name = '';
+	$scope.friendForm.age = '';
+	$scope.friendForm.yearMet='';
+  };
 });
