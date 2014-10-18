@@ -1,0 +1,63 @@
+<!doctype html>
+<html ng-app="fullStackApp"> 
+  <head>
+    <meta charset="utf-8">
+    <title>full-stack</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="Styles/style.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+  </head>
+  <body ng-controller="mainCtrl">
+    
+    <!-- Add your site or application content here -->
+    <div class="container"></div>
+
+    <div class= "display-inline">
+        <h2>Family</h2>
+        <ul ng-repeat= "member in family">
+            <li>name: {{member.name}}</li>
+            <li>age: {{member.age}}</li>
+            <li>relationship: {{member.relationship}}</li>
+
+        </ul>
+
+        <button ng-click= "getFamily()">Get Family</button>
+    </div>
+    <div class= "display-inline">
+        <h2>Friends</h2>
+        <ul ng-repeat= "friend in friends">
+            <li>name: {{friend.name}}</li>
+            <li>age: {{friend.age}}</li>
+            <li>year met: {{friend.yearMet}}</li>
+
+        </ul>
+        <button ng-click="getFriends()">Get Friends</button>
+    </div>
+    <div class= "display-inline">
+        <h2>Activities</h2>
+        <ul ng-repeat= "activity in activities">
+            <li>Activity: {{activity.name}}</li>
+        </ul>
+        <button ng-click="getActivities()">Get Activities</button>
+    </div>
+    <div class= "display-inline">
+        <h2>Personal Information</h2>
+        <ul>
+            <li>name: {{personalInformation.name}}</li>
+            <li>age: {{personalInformation.age}}</li>
+            <li>height: {{personalInformation.height}}</li>
+            <li>favorite movie: {{personalInformation.favoriteMovie}}</li>
+            <li>favorite artist: {{personalInformation.favoriteArtist}}</li>
+            <li>favorite food: {{personalInformation.favoriteFood}}</li>
+        </ul>
+        <button ng-click= "getPersonalInformation()">Get Personal Information</button>
+    </div>
+
+    
+    <script src="js/app.js"></script>
+    <script src="js/myCtrl.js"></script>
+    <script src="js/myDirectives.js"></script>
+    <script src="js/myService.js"></script>
+</body>
+</html>
